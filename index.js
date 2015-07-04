@@ -1,5 +1,4 @@
-import React from 'react'
-import createSideEffect from 'react-side-effect'
+let createSideEffect = require('react-side-effect');
 
 let _keyMap = {};
 
