@@ -1,20 +1,19 @@
+import React from 'react'
+import createSideEffect from 'react-side-effect'
 
-var React = require('react')
-let createSideEffect = require('react-side-effect')
-
-let _keyMap = {}
+let _keyMap = {};
 
 let Keybindings = createSideEffect(function handleChange(propsList) {
 
-  let keyMap = {}
+  let keyMap = {};
 
   propsList.forEach(function (props) {
     Object.assign(keyMap, props.keyMap);
-  })
+  });
 
   for (var key in keyMap) {
     Mousetrap.bind(key, keyMap[key])
-    _keyMap[key] = keyMap[key]
+    _keyMap[key] = keyMap[key];
   }
 },{
   componentWillUnmount() {
@@ -24,4 +23,4 @@ let Keybindings = createSideEffect(function handleChange(propsList) {
   }
 });
 
-module.exports = Keybindings
+module.exports = Keybindings;
