@@ -1,24 +1,24 @@
-import React from 'react'
-import createSideEffect from 'react-side-effect'
+var createSideEffect require('react-side-effect');
 
-let _keyMap = {};
+var _keyMap = {};
 
-let Keybindings = createSideEffect(function handleChange(propsList) {
+var Keybindings = createSideEffect(function handleChange(propsList) {
 
-  let keyMap = {};
+  var keyMap = {};
 
   propsList.forEach(function (props) {
+    //add object assign polyfill to make this standalone
     Object.assign(keyMap, props.keyMap);
   });
 
   for (var key in keyMap) {
-    Mousetrap.bind(key, keyMap[key])
+    Mousetrap.bind(key, keyMap[key]);
     _keyMap[key] = keyMap[key];
   }
 },{
   componentWillUnmount() {
     for (var key in _keyMap){
-      Mousetrap.unbind(key)
+      Mousetrap.unbind(key);
     }
   }
 });
