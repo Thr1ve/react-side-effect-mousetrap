@@ -1,0 +1,23 @@
+{
+  "name": "react-side-effect-mousetrap",
+  "version": "0.0.0",
+  "description": "A simple wrapper around Mousetrap using react-side-effect",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thr1ve/react-side-effect-mousetrap.git"
+  },
+  "author": "thr1ve",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thr1ve/react-side-effect-mousetrap/issues"
+  },
+  "homepage": "https://github.com/Thr1ve/react-side-effect-mousetrap#readme",
+  "dependencies": {
+    "react": "^0.13.3",
+    "react-side-effect": "^0.3.0"
+  }
+}
