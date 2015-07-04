@@ -1,4 +1,4 @@
-var createSideEffect require('react-side-effect');
+var createSideEffect = require('react-side-effect');
 
 var _keyMap = {};
 
@@ -16,7 +16,7 @@ var Keybindings = createSideEffect(function handleChange(propsList) {
     _keyMap[key] = keyMap[key];
   }
 },{
-  componentWillUnmount() {
+  componentWillUnmount : function() {
     for (var key in _keyMap){
       Mousetrap.unbind(key);
     }
