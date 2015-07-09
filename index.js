@@ -7,7 +7,7 @@ var Keybindings = createSideEffect(function handleChange(propsList) {
   var keyMap = {};
 
   propsList.forEach(function (props) {
-    //add object assign polyfill to make this standalone
+    //TODO: add object assign polyfill to make this standalone ?
     Object.assign(keyMap, props.keyMap);
   });
 
